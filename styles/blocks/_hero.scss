@@ -8,6 +8,10 @@
         justify-content: space-between;
         align-items: start;
         column-gap: 30px;
+
+        @include mobile {
+            flex-direction: column;
+        }
     }
 
     &__body {
@@ -16,11 +20,34 @@
         align-items: start;
         max-width: 531px;
         row-gap: 35px;
+
+        @include mobile {
+            display: contents;
+        }
+    }
+
+    &__title {
+        @include mobile {
+            order: -2;
+            margin-bottom: 10px;
+        }
     }
 
     &__description {
         font-size: 20px;
         line-height: 1.4;
+
+        @include mobile {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__button {
+        @include mobile {
+            width: 100%;
+            max-width: 390px;
+            margin-inline: auto;
+        }
     }
 
     &__partners {
@@ -37,6 +64,13 @@
     &__image {
         @include tablet {
             max-width: 40%;
+        }
+
+        @include mobile {
+            order: -1;
+            max-width: 100%;
+            width: 100%;
+            margin-bottom: 20px;
         }
     }
 }
